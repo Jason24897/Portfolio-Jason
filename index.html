@@ -32,60 +32,40 @@
 
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
-            padding: 80px 20px; /* Augmentation du padding pour plus d'espace */
+            padding: 40px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            /* Ajout d'un léger dégradé de base pour les formes */
         }
 
-        /* Première forme diagonale (plus grande) */
         header::before {
             content: '';
             position: absolute;
-            top: -30%; /* Commence plus haut */
-            left: -10%; /* Commence plus à gauche */
-            width: 80%; /* Plus large */
-            height: 150%; /* Plus haut */
-            background: rgba(255, 255, 255, 0.15); /* Plus opaque et blanc */
-            transform: rotate(-25deg); /* Angle différent */
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
             z-index: 0;
-            border-radius: 30px; /* Bords légèrement arrondis */
-            filter: blur(5px); /* Effet flou */
-        }
-
-        /* Deuxième forme diagonale (plus petite, de l'autre côté) */
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -30%; /* Commence plus bas */
-            right: -10%; /* Commence plus à droite */
-            width: 70%; /* Moins large */
-            height: 120%; /* Moins haut */
-            background: rgba(255, 255, 255, 0.1); /* Moins opaque et blanc */
-            transform: rotate(35deg); /* Angle différent */
-            z-index: 0;
-            border-radius: 20px; /* Bords légèrement arrondis */
-            filter: blur(3px); /* Effet flou */
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 4.5em; /* Taille plus grande pour Jason */
+            font-size: 3.5em;
             color: white;
             margin-bottom: 10px;
             position: relative;
             z-index: 1;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3); /* Ombre plus prononcée */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         header p {
-            font-size: 1.6em; /* Taille plus grande pour le sous-titre */
+            font-size: 1.4em;
             color: white;
-            opacity: 0.85; /* Légèrement moins opaque */
+            opacity: 0.9;
             position: relative;
             z-index: 1;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Légère ombre */
         }
 
         main {
@@ -257,11 +237,11 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 3.5em; /* Ajustement pour les petits écrans */
+                font-size: 2.5em;
             }
 
             header p {
-                font-size: 1.3em; /* Ajustement pour les petits écrans */
+                font-size: 1.1em;
             }
 
             section {
@@ -283,11 +263,11 @@
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2.5em; /* Ajustement pour les très petits écrans */
+                font-size: 2em;
             }
 
             header p {
-                font-size: 1.1em; /* Ajustement pour les très petits écrans */
+                font-size: 1em;
             }
 
             section {
@@ -309,7 +289,8 @@
     <main>
         <section id="about">
             <h2>À propos</h2>
-            <p>Salut, Moi c'est Jason ! Je viens de terminer mon BTS Communication et j'entame désormais mon Master en Septembre. En parallèle, je travaille en alternance comme Responsable Communication pour l'un des leader de la telecommunication en france </p>
+            <p>Salut, Moi c'est Jason ! Je viens de terminer mon BTS Communication et j'entame désormais mon Master en Septembre. En parallèle, je travaille en alternance comme Responsable Communication pour l'un des leader de la telecommunication en france
+</p>
         </section>
 
         <section id="skills">
