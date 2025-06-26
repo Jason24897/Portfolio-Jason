@@ -32,40 +32,60 @@
 
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
-            padding: 40px 20px;
+            padding: 80px 20px; /* Augmentation du padding pour plus d'espace */
             text-align: center;
             position: relative;
             overflow: hidden;
+            /* Ajout d'un léger dégradé de base pour les formes */
         }
 
+        /* Première forme diagonale (plus grande) */
         header::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(45deg);
+            top: -30%; /* Commence plus haut */
+            left: -10%; /* Commence plus à gauche */
+            width: 80%; /* Plus large */
+            height: 150%; /* Plus haut */
+            background: rgba(255, 255, 255, 0.15); /* Plus opaque et blanc */
+            transform: rotate(-25deg); /* Angle différent */
             z-index: 0;
+            border-radius: 30px; /* Bords légèrement arrondis */
+            filter: blur(5px); /* Effet flou */
+        }
+
+        /* Deuxième forme diagonale (plus petite, de l'autre côté) */
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%; /* Commence plus bas */
+            right: -10%; /* Commence plus à droite */
+            width: 70%; /* Moins large */
+            height: 120%; /* Moins haut */
+            background: rgba(255, 255, 255, 0.1); /* Moins opaque et blanc */
+            transform: rotate(35deg); /* Angle différent */
+            z-index: 0;
+            border-radius: 20px; /* Bords légèrement arrondis */
+            filter: blur(3px); /* Effet flou */
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3.5em;
+            font-size: 4.5em; /* Taille plus grande pour Jason */
             color: white;
             margin-bottom: 10px;
             position: relative;
             z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3); /* Ombre plus prononcée */
         }
 
         header p {
-            font-size: 1.4em;
+            font-size: 1.6em; /* Taille plus grande pour le sous-titre */
             color: white;
-            opacity: 0.9;
+            opacity: 0.85; /* Légèrement moins opaque */
             position: relative;
             z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Légère ombre */
         }
 
         main {
@@ -237,11 +257,11 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 3.5em; /* Ajustement pour les petits écrans */
             }
 
             header p {
-                font-size: 1.1em;
+                font-size: 1.3em; /* Ajustement pour les petits écrans */
             }
 
             section {
@@ -263,11 +283,11 @@
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5em; /* Ajustement pour les très petits écrans */
             }
 
             header p {
-                font-size: 1em;
+                font-size: 1.1em; /* Ajustement pour les très petits écrans */
             }
 
             section {
